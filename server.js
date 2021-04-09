@@ -10,11 +10,11 @@ const connectDB = require('./config/db');
 // Load config.env file so we can use the variables above
 dotenv.config({ path: './config/config.env' });
 
-// Connect to MongoDB
-connectDB();
-
 // Route files - bring the files in from bootcamps.js
 const bootcamps = require('./routes/bootcamps');
+
+// Connect to MongoDB
+connectDB();
 
 // Initialise app variable
 const app = express();
